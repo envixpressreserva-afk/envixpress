@@ -8,7 +8,7 @@ const products = [
         price: 4500,
         category: "triciclos",
         description: "Batería 60V/90ah LifePho4, autonomía 120km, carga 1000kg, motor 1500w, gato idraulico, extensor de rango, alarma",
-        images: ["img/mishosuki.JPG"],
+        images: ["mishosuki.JPG"],
         colors: ["Rojo",],
         featured: true
     },
