@@ -65,7 +65,7 @@ const products = [
     {
         id: 6,
         name: "Moto Topmaq FF ",
-        price: 6200,
+        price: 2000,
         category: "motos",
         description: "Motor 3000W, batería 72V/45ah, velocidad 50-60km/h, autonommia 100km, Reproductor bluetooth, Caja reguladora Votol EM-50",
         images: ["topmac72v.JPG"],
