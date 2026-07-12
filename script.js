@@ -8,7 +8,7 @@ const products = [
         price: 4500,
         category: "triciclos",
         description: "Batería 60V/90ah LifePho4, autonomía 120km, carga 1000kg, motor 1500w, gato idraulico, extensor de rango, alarma",
-        images: ["img/mishosuki.jpg"],
+        images: ["img/mishosuki.JPG"],
         colors: ["Rojo",],
         featured: true
     },
@@ -104,7 +104,7 @@ const products = [
     },
     {
         id: 10,
-        name: "Moto 250cc Automatica Mishosuki",
+        name: "Moto 200cc Automatica Mishosuki",
         price: 2600,
         category: "combustion",
         description: "Motor 200cc, suspensión regulable, neumáticos 8capas, tanque 6L, vel max 100km/h, iluminacion led, frenos disco y tambor",
