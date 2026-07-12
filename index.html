@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>ENVIXpress | Reserva de Vehículos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="liquid-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-car"></i>
+                    <h1>ENVI<span>Xpress</span></h1>
+                </div>
+                <div class="header-actions">
+                    <button class="info-btn" onclick="toggleInfoModal()" title="Información de compra">
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                    <div class="cart-icon" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Búsqueda -->
+        <div class="search-section liquid">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" placeholder="Buscar vehículos..." id="searchInput" onkeyup="searchFood()">
+        </div>
+
+        <!-- Info del negocio -->
+        <section class="info-section liquid">
+            <div class="info-content">
+                <h2 class="info-title"> ENVIXpress – ¡Reserva ya tu vehículo!</h2>
+                <p class="info-description">
+                    Somos una empresa dedicada a la importación y venta de vehículos establecida en Cuba. 
+                    Llevamos años de experiencia en el mercado internacional.
+                </p>
+            </div>
+        </section>
+
+        <!-- Oferta -->
+        <section class="offer-section liquid">
+            <div class="offer-content">
+                <i class="fas fa-rocket"></i>
+                <div>
+                    <h3>ENVÍO XPRESS</h3>
+                    <p>Plazo de entrega <strong>menos de 2 meses</strong> con un <strong>15% de anticipo</strong>.<br>
+                    Reserva estándar: <strong>10% de anticipo</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías -->
+        <div class="categories">
+            <div class="category-item active" onclick="filterCategory('all')">
+                <i class="fas fa-th-list"></i>
+                <span>Todo</span>
+            </div>
+            <div class="category-item" onclick="filterCategory('triciclos')">
+                <i class="fas fa-motorcycle"></i>
+                <span>Triciclos</span>
+            </div>
+            <div class="category-item" onclick="filterCategory('motos')">
+                <i class="fas fa-motorcycle"></i>
+                <span>Motos</span>
+            </div>
+            <div class="category-item" onclick="filterCategory('bicimotos')">
+                <i class="fas fa-bicycle"></i>
+                <span>Bicimotos</span>
+            </div>
+            <div class="category-item" onclick="filterCategory('combustion')">
+                <i class="fas fa-gas-pump"></i>
+                <span>Combustión</span>
+            </div>
+        </div>
+
+        <!-- Productos destacados -->
+        <section class="featured-section">
+            <h2 class="section-title">
+                <span> DESTACADOS</span>
+                <i class="fas fa-sparkles"></i>
+            </h2>
+            <div class="products-grid" id="featuredProducts"></div>
+        </section>
+
+        <!-- Todos los productos -->
+        <section class="all-products-section">
+            <h2 class="section-title">
+                <span>CATÁLOGO COMPLETO</span>
+                <i class="fas fa-grid-2"></i>
+            </h2>
+            <div class="products-grid" id="allProducts"></div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="contact-section liquid">
+            <div class="contact-content">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Dirección</h3>
+                        <p>Ulitsa Aviatorov, 4К1, Lyubertsy, Moskovskaya oblast', Rusia, 140011/p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-telegram-plane"></i>
+                    <div>
+                        <h3>Telegram</h3>
+                        <p>+7 925 225 6181</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email de reservas</h3>
+                        <p>envixpressreserva@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrito -->
+        <div class="cart-panel" id="cartPanel">
+            <div class="cart-header liquid">
+                <h3>TU RESERVA</h3>
+                <i class="fas fa-xmark" onclick="toggleCart()"></i>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer liquid">
+                <div id="offerMessage" class="offer-message" style="display: none;"></div>
+                <div class="cart-total">
+                    <span>TOTAL</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">
+                    <i class="fas fa-check-circle"></i> RESERVAR AHORA
+                </button>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+        <!-- Modal de información del proceso -->
+        <div class="modal-overlay" id="infoModal">
+            <div class="modal-content liquid">
+                <div class="modal-header">
+                    <h3> PROCESO DE COMPRA</h3>
+                    <i class="fas fa-xmark" onclick="toggleInfoModal()"></i>
+                </div>
+                <div class="modal-body">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p><strong>Realiza la reserva</strong> mediante el formulario de correo electrónico.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Recibirás un correo con la <strong>información del vehículo</strong> y los datos para el <strong>depósito del 10%</strong> (o 15% si es envío Xpress).</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Confirma el pago y obtendrás un <strong>Boleto con código ID</strong> con toda la información para la entrega.</p>
+                    </div>
+                    <div class="step warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p><strong>⚠️ Importante:</strong> No compartas tu código ID con nadie. No nos hacemos responsables por la pérdida o extravío de dicho documento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
