@@ -18,7 +18,7 @@ const products = [
         price: 4000,
         category: "triciclos",
         description: "Motor 1500W, batería 72V/90ah LifePho4, Autonomia 120km, capacidad 1000kg, cabina, forro, gato idraulico, goma de repuesto, alarma ",
-        images: ["img/vedcac800.webp"],
+        images: ["vedcac800.webp"],
         colors: ["Azul"],
         featured: false
     },
@@ -28,7 +28,7 @@ const products = [
         price: 6200,
         category: "triciclos",
         description: "Motor 250cc, Bateria 12v, Gato idraulico, Bujia de repuest, Dos forros, Dos ruedas de repuesto, capacidad 1500kg, ",
-        images: ["img/kvitova.jpg", "img/kvitova2.jpg"],
+        images: ["kvitova.jpg", "kvitova2.jpg"],
         colors: ["Negro", "Verde"],
         featured: true
     },
@@ -38,7 +38,7 @@ const products = [
         price: 3800,
         category: "triciclos",
         description: "Batería 72V 50Ah Litio, alarma, velocidad 60km/h, autonomía 100km, capacidad 1000kg, cabina, goma de repuesto, gato idraulico",
-        images: ["img/vedcac300.webp"],
+        images: ["vedcac300.webp"],
         colors: ["Verde"],
         featured: true
     },
@@ -48,7 +48,7 @@ const products = [
         price: 2000,
         category: "triciclos",
         description: "Batería 60V 35Ah Litio, velocidad 50km/h, autonomía 80km, capacidad 300kg,",
-        images: ["img/jinpeng.webp"],
+        images: ["jinpeng.webp"],
         colors: ["Rojo"],
         featured: true
     },
@@ -58,7 +58,7 @@ const products = [
         price: 2000,
         category: "motos",
         description: "Motor 2000W, batería 72v/28ah Litio, 4 velocidades, Reproductor de musica Bluetooth, Autonomia 80km, Pizarra digital, alarma, iluminacion led",
-        images: ["img/unizuki.jpg","img/unizuki1.jpg","img/unizuki2.jpg","img/unizuki3.jpg",],
+        images: ["unizuki.jpg","unizuki1.jpg","unizuki2.jpg","unizuki3.jpg",],
         colors: ["Morado", "Azul", "Rojo", "Negro"],
         featured: false
     },
@@ -68,7 +68,7 @@ const products = [
         price: 6200,
         category: "motos",
         description: "Motor 3000W, batería 72V/45ah, velocidad 50-60km/h, autonommia 100km, Reproductor bluetooth, Caja reguladora Votol EM-50",
-        images: ["img/topmac72v.jpg"],
+        images: ["topmac72v.jpg"],
         colors: ["Rojo", "Negro", "Morado", "Azul"],
         featured: false
     },
@@ -78,7 +78,7 @@ const products = [
         price: 1900,
         category: "bicimotos",
         description: "Motor 3000W, batería 48V/45ah, pedal asistido, freno de disco, Reproductor de musica Bluetooth",
-        images: ["img/topmac.jpg", "img/topmac2.jpg"],
+        images: ["topmac.jpg", "topmac2.jpg"],
         colors: ["Morado", "Amarillo"],
         featured: false
     },
@@ -88,7 +88,7 @@ const products = [
         price: 600,
         category: "bicimotos",
         description: "Motot 500w, Bateria LifePho4 48v/30ah, frenos de tambor, cesta",
-        images: ["img/wehawk.jpg", "img/wehawk2.jpg"],
+        images: ["wehawk.jpg", "wehawk2.jpg"],
         colors: ["Morado", "Azul"],
         featured: false
     },
@@ -98,7 +98,7 @@ const products = [
         price: 2250,
         category: "combustion",
         description: "Motor 150cc, 4 tiempos, refrigeración por aire, vel max 90km/h, capacidad del tanque 6L, frenos disco y tambor",
-        images: ["img/bws5g.jpg", "img/bws5g2.jpg", "img/bws5g3.jpg"],
+        images: ["bws5g.jpg", "bws5g2.jpg", "bws5g3.jpg"],
         colors: ["Azul", "Negro", "Rosa"],
         featured: false
     },
@@ -108,7 +108,7 @@ const products = [
         price: 2600,
         category: "combustion",
         description: "Motor 200cc, suspensión regulable, neumáticos 8capas, tanque 6L, vel max 100km/h, iluminacion led, frenos disco y tambor",
-        images: ["img/mishosuki200cc.png"],
+        images: ["mishosuki200cc.png"],
         colors: ["Rojo"],
         featured: false
     },
@@ -118,7 +118,7 @@ const products = [
         price: 2750,
         category: "combustion",
         description: "Unidad 110 cc 4 tiempos, baúl incluido,llaves de utilidad, vel max 120km/h, 1.5L/100km",
-        images: ["img/crux110cc.jpg","img/crux110cc1.jpg","img/crux110cc2.jpg","img/crux110cc3.jpg","img/crux110cc4.jpg",],
+        images: ["crux110cc.jpg","crux110cc1.jpg","crux110cc2.jpg","crux110cc3.jpg","crux110cc4.jpg",],
         colors: ["Rojo"],
         featured: true
     }
